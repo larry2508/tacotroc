@@ -5,47 +5,53 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tacotroc.api.tacotroc.beans.Version;
-import tacotroc.api.tacotroc.dao.IVersionDao;
-import tacotroc.api.tacotroc.service.interfaces.IVersionService;
+import tacotroc.api.tacotroc.beans.Type;
+import tacotroc.api.tacotroc.dao.ITypeDao;
+import tacotroc.api.tacotroc.service.interfaces.ITypeService;
+
 
 @Service
-public class VersionService implements IVersionService {
+public class TypeService implements ITypeService{
+
 	@Autowired
-	IVersionDao idao;
+	ITypeDao idao;
+	
 	@Override
-	public List<Version> allVersion() {
+	public List<Type> allType() {
 		// TODO Auto-generated method stub
 		return idao.findAll();
 	}
 
 	@Override
-	public Version allVersion(int id) {
+	public Type allType(int id) {
+		// TODO Auto-generated method stub
 		Integer ids=id;
 		return idao.findById(ids).get();
 	}
 
 	@Override
-	public void addCVersion(String name) {
-		Version c= new Version();
+	public void addType(String name) {
+		// TODO Auto-generated method stub
+		Type c= new Type();
 		c.setName(name);
 		idao.save(c);
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteVersion(int id) {
+	public void deleteType(int id) {
 		idao.deleteById(id);
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void updateVersion(Version version) {
-		idao.save(version);
+	public void updateType(Type type) {
+		idao.save(type);
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tacotroc.api.tacotroc.beans.Color;
 import tacotroc.api.tacotroc.beans.Version;
 import tacotroc.api.tacotroc.service.interfaces.IVersionService;
 
@@ -21,30 +20,30 @@ public class VersionController {
 
 
 	@Autowired
-	IVersionService iversionserv;
+	IVersionService iserv;
 	
 	@GetMapping(value="/version")
 	public List<Version> allversion(){
-	return iversionserv.allVersion();
+	return iserv.allVersion();
 	}
 	@GetMapping(value="/version/{id}")
 	public Version allversion(@PathVariable int id){
-	return iversionserv.allVersion(id);
+	return iserv.allVersion(id);
 	}
 	
 	@GetMapping(value="/version/add/{name}")
-	public void addversion(@PathVariable String name){
-		 iversionserv.addCVersion(name);
+	public void deleteversion(@PathVariable String name){
+		 iserv.addCVersion(name);
 	}
 	
 	@GetMapping(value="/version/delete/{id}")
 	public void addversion(@PathVariable int id){
-		 iversionserv.deleteVersion(id);
+		 iserv.deleteVersion(id);
 	}
 	
 	@PostMapping(value = "/version/update")
 	public void updateversions(@RequestBody Version version){
-		iversionserv.updateColor(version);
+		iserv.updateVersion(version);
 	}
 	
 }

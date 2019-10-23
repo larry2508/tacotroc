@@ -2,8 +2,11 @@ package tacotroc.api.tacotroc.service.interfaces;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import tacotroc.api.tacotroc.beans.Version;
 
+@Service
 public interface IVersionService {
 
 	List<Version> allVersion();
@@ -14,6 +17,6 @@ public interface IVersionService {
 
 	void deleteVersion(int id);
 
-	void updateColor(Version version);
+	void updateVersion(Version version);
 
 }

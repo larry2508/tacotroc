@@ -10,15 +10,15 @@ import tacotroc.api.tacotroc.dao.IColorDao;
 import tacotroc.api.tacotroc.service.interfaces.IColorService;
 
 @Service
-public class Colorservice implements IColorService {
+public class ColorService implements IColorService {
 
 @Autowired
-IColorDao icolordao;
+IColorDao idao;
 
 @Override
 public List<Color> allColor() {
 	
-	return icolordao.findAll();
+	return idao.findAll();
 }
 
 
@@ -26,7 +26,7 @@ public List<Color> allColor() {
 public void addColor(String name) {
 	Color c= new Color();
 	c.setName(name);
-	icolordao.save(c);
+	idao.save(c);
 
 	
 }
@@ -35,7 +35,7 @@ public void addColor(String name) {
 @Override
 public void deleteColor(int id) {
 	
-	icolordao.deleteById(id);
+	idao.deleteById(id);
 	// TODO Auto-generated method stub
 	
 }
@@ -43,7 +43,7 @@ public void deleteColor(int id) {
 
 @Override
 public void updateColor(Color color) {
-	icolordao.save(color);
+	idao.save(color);
 	// TODO Auto-generated method stub
 	
 }
@@ -53,7 +53,7 @@ public void updateColor(Color color) {
 public Color allColor(int id) {
 	// TODO Auto-generated method stub
 	Integer ids=id;
-	return icolordao.findById(ids).get();
+	return idao.findById(ids).get();
 }
 
 

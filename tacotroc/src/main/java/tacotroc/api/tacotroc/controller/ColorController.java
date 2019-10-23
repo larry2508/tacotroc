@@ -21,31 +21,31 @@ public class ColorController {
 	
 	
 	@Autowired
-	IColorService icolorserv;
+	IColorService iserv;
 	
 	@GetMapping(value="/color")
 	public List<Color> allcolor(){
-	return icolorserv.allColor();
+	return iserv.allColor();
 	}
 	
 	@GetMapping(value="/color/{id}")
 	public Color allcolor(@PathVariable int id){
-	return icolorserv.allColor(id);
+	return iserv.allColor(id);
 	}
 	
 	@GetMapping(value="/color/add/{name}")
 	public void addcolor(@PathVariable String name){
-		 icolorserv.addColor(name);
+		 iserv.addColor(name);
 	}
 	
 	@GetMapping(value="/color/delete/{id}")
-	public void addcolor(@PathVariable int id){
-		 icolorserv.deleteColor(id);
+	public void deletecolor(@PathVariable int id){
+		 iserv.deleteColor(id);
 	}
 	
 	@PostMapping(value = "/color/update")
 	public void updateColor(@RequestBody Color color){
-		icolorserv.updateColor(color);
+		iserv.updateColor(color);
 	}
 	
 
