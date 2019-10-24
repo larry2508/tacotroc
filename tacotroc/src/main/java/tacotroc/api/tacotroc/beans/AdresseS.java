@@ -3,6 +3,8 @@ package tacotroc.api.tacotroc.beans;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -29,7 +31,11 @@ public class AdresseS {
 	@Column(name ="Country" )
 	private String pays;
 
-//	private User user;
+	@OneToOne
+	@JoinColumn(name= "id_twp_user")
+	private User user;
+
+
 	
 	
 }
