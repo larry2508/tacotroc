@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_nationality")
+@Table(name = "twp_Nationality")
 public class Nationalite {
 	@Id
 	private int id ;

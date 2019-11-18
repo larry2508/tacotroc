@@ -9,7 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.sun.istack.Nullable;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_user")
+@Table(name = "twp_User")
 
 public class User {
 	@Id

@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_color")
+@Table(name = "twp_Color")
 public class Color {
 
 

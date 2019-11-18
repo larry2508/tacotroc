@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_serie")
+@Table(name = "twp_Serie")
 public class Serie {
 	@Id
 	private int id ;

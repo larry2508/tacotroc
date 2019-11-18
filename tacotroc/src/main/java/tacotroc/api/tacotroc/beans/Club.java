@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_club")
+@Table(name = "twp_Club")
 
 public class Club {
 	@Id

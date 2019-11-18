@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tacotroc.api.tacotroc.beans.Cylindre;
 import tacotroc.api.tacotroc.beans.Musee;
 import tacotroc.api.tacotroc.dao.IMuseeDao;
 import tacotroc.api.tacotroc.service.interfaces.IMuseeService;

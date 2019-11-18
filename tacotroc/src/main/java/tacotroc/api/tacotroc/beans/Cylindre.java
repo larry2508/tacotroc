@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_cylinder")
+@Table(name = "twp_Cylinder")
 public class Cylindre {
 	@Id
 	private int id ;

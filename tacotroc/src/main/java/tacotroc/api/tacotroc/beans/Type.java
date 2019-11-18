@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_type")
+@Table(name = "twp_Type")
 public class Type {
 	@Id
 	private int id ;

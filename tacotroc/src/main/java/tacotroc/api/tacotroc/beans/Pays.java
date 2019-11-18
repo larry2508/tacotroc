@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_country")
+@Table(name = "twp_Country")
 public class Pays {
 
 	@Id

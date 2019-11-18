@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "twp_museum")
+@Table(name = "twp_Museum")
 
 
 public class Musee {
