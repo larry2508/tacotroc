@@ -9,10 +9,10 @@ import tacotroc.api.tacotroc.beans.Color;
 @Service
 public interface IColorService {
 
-	
+
 	List<Color> allColor();
 
-	 void addColor(String name);
+	void addColor(String name);
 
 	void deleteColor(int id);
 
@@ -20,5 +20,5 @@ public interface IColorService {
 
 	Color allColor(int id);
 
-	
+
 }

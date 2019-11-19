@@ -1,4 +1,4 @@
-package tacotroc.api.tacotroc.beans;
+package tacotroc.api.tacotroc.dto;
 
 import java.io.Serializable;
 
@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import tacotroc.api.tacotroc.beans.Color;
 
 @Getter
 @Setter

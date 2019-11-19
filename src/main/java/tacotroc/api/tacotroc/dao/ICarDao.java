@@ -1,5 +1,10 @@
 package tacotroc.api.tacotroc.dao;
 
-public interface ICarDao {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tacotroc.api.tacotroc.dto.Car;
+
+
+public interface ICarDao extends JpaRepository<Car, Integer> {
 
 }
