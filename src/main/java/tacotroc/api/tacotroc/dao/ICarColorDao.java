@@ -10,6 +10,6 @@ import tacotroc.api.tacotroc.dto.CarColor;
 public interface ICarColorDao  extends JpaRepository<CarColor, Integer>{
 
 	
-	@Query("SELECT u FROM rel_car_color  u WHERE u.id =?1")
+	@Query("SELECT u FROM rel_car_color u WHERE u.id =?1")
 	List<CarColor> findAllCCbyid(int i);
 }

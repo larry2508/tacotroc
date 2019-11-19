@@ -14,20 +14,17 @@ public class CarColorService implements ICarColorService {
 	ICarColorDao idao;
 	@Override
 	public List<CarColor> allColor() {
-
 		return idao.findAll();
 	}
 
 	@Override
 	public void addColor(CarColor color) {
-		idao.save(color);
-		
+		idao.save(color);		
 	}
 
 	@Override
 	public void deleteColor(int id) {
 		deleteColor(id);
-		
 	}
 
 	@Override
@@ -39,6 +36,7 @@ public class CarColorService implements ICarColorService {
 	@Override
 	public List<CarColor> allColor(int id) {
 	return idao.findAllCCbyid(id);
+		//return null;
 	}
 
 }

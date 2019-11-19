@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -16,6 +17,7 @@ import tacotroc.api.tacotroc.beans.Color;
 @Setter
 @Entity
 @Table(name = "rel_car_color")
+@IdClass(CarColor.class)
 public class CarColor implements Serializable{
 
 	@Id

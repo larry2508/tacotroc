@@ -32,18 +32,19 @@ public class CarService implements ICarService{
 	}
 	@Override
 	public void deleteCar(int id) {
-		// TODO Auto-generated method stub
+		idao.deleteById(id);
 		
 	}
 	@Override
 	public void updateCar(tacotroc.api.tacotroc.dto.Car car) {
 		// TODO Auto-generated method stub
-		
+		idao.save(car);
 	}
 	@Override
 	public Car allCar(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		Car c = new Car(idao.findById(id).get());
+		return c;
 	}
 
 
