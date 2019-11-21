@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import tacotroc.api.tacotroc.beans.AdresseS;
 
-public interface IAdresseSDao extends JpaRepository<AdresseS, Integer> {
+public interface IAdresseSDao extends JpaRepository<AdresseS, Long> {
 
 }

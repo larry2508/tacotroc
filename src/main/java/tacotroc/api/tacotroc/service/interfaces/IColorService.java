@@ -14,11 +14,11 @@ public interface IColorService {
 
 	void addColor(String name);
 
-	void deleteColor(int id);
+	void deleteColor(long id);
 
 	void updateColor(Color color);
 
-	Color allColor(int id);
+	Color allColor(long id);
 
 
 }

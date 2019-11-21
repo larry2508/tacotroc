@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name = "twp_Brand")
 public class Marque {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 	

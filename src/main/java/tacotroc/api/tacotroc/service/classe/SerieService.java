@@ -22,9 +22,9 @@ public class SerieService implements ISerieService {
 	}
 
 	@Override
-	public Serie allSerie(int id) {
+	public Serie allSerie(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 
@@ -37,7 +37,7 @@ public class SerieService implements ISerieService {
 	}
 
 	@Override
-	public void deleteSerie(int id) {
+	public void deleteSerie(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}

@@ -12,9 +12,9 @@ public interface IPaysService {
 
 	void addPays(String name);
 
-	void deletePays(int id);
+	void deletePays(long id);
 
 	void updatePays(Pays pays);
 
-	Pays allPays(int id);
+	Pays allPays(long id);
 }

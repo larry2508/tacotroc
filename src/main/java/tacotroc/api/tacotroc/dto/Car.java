@@ -3,6 +3,7 @@ package tacotroc.api.tacotroc.dto;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -10,6 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import tacotroc.api.tacotroc.beans.Cylindre;
 import tacotroc.api.tacotroc.beans.Model;
 import tacotroc.api.tacotroc.beans.Musee;
@@ -19,6 +21,7 @@ import tacotroc.api.tacotroc.beans.Serie;
 import tacotroc.api.tacotroc.beans.Type;
 import tacotroc.api.tacotroc.beans.User;
 import tacotroc.api.tacotroc.beans.Version;
+@ToString
 @Getter
 @Setter
 @Entity
@@ -27,7 +30,7 @@ import tacotroc.api.tacotroc.beans.Version;
 @Table(name = "twp_Car")
 public class Car {
 	@Id	
-	private int id;
+	private long id;
 	@Column	
 	private String Immatriculation;
 	@Column	
@@ -39,24 +42,33 @@ public class Car {
 	@Column	
 	private Boolean Restoration;
 	@OneToOne
+	@JoinColumn(name = "id_twp_User")
 	private User id_twp_User;
 	@Column
 	private long Years;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Model")
 	private Model id_twp_Model;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Version")
 	private Version id_twp_Version;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Type")
 	private Type id_twp_Type;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Cylinder")
 	private Cylindre id_twp_Cylinder;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Serie")
 	private Serie id_twp_Serie;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Owner")
 	private Proprietaire id_twp_Owner;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Country")
 	private Pays id_twp_Country;
 	@OneToOne
+	@JoinColumn(name = "id_twp_Museum")
 	private Musee id_twp_Museum;
 	
 	

@@ -29,7 +29,7 @@ public class CylindreService implements ICylindreService{
 	}
 
 	@Override
-	public void deleteCylindre(int id) {
+	public void deleteCylindre(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -41,9 +41,9 @@ public class CylindreService implements ICylindreService{
 	}
 
 	@Override
-	public Cylindre allCylindre(int id) {
+	public Cylindre allCylindre(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

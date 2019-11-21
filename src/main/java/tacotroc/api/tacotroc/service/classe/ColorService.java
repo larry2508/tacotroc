@@ -33,7 +33,7 @@ public void addColor(String name) {
 
 
 @Override
-public void deleteColor(int id) {
+public void deleteColor(long id) {
 	
 	idao.deleteById(id);
 	// TODO Auto-generated method stub
@@ -50,9 +50,9 @@ public void updateColor(Color color) {
 
 
 @Override
-public Color allColor(int id) {
+public Color allColor(long id) {
 	// TODO Auto-generated method stub
-	Integer ids=id;
+	Long ids=id;
 	return idao.findById(ids).get();
 }
 

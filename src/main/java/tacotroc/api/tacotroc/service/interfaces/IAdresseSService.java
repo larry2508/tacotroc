@@ -11,9 +11,9 @@ public interface IAdresseSService {
 
 	List<AdresseS> allAdresseS();
 
-	void deleteAdresseS(int id);
+	void deleteAdresseS(long id);
 
 	void addAdresseS (AdresseS adresseS);
 
-	AdresseS allAdresseS(int id);
+	AdresseS allAdresseS(long id);
 }

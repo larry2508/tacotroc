@@ -29,7 +29,7 @@ public class CylindreController {
 	}
 	
 	@GetMapping(value="/cylindre/{id}")
-	public Cylindre allcylindre(@PathVariable int id){
+	public Cylindre allcylindre(@PathVariable long id){
 	return iserv.allCylindre(id);
 	}
 	
@@ -39,7 +39,7 @@ public class CylindreController {
 	}
 	
 	@GetMapping(value="/cylindre/delete/{id}")
-	public void deletecylindre(@PathVariable int id){
+	public void deletecylindre(@PathVariable long id){
 		 iserv.deleteCylindre(id);
 	}
 	

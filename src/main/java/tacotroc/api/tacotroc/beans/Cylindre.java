@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name = "twp_cylinder")
 public class Cylindre {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Cylinder" )
 	private String name;
 }

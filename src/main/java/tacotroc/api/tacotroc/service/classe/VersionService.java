@@ -20,8 +20,8 @@ public class VersionService implements IVersionService {
 	}
 
 	@Override
-	public Version allVersion(int id) {
-		Integer ids=id;
+	public Version allVersion(long id) {
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 
@@ -35,7 +35,7 @@ public class VersionService implements IVersionService {
 	}
 
 	@Override
-	public void deleteVersion(int id) {
+	public void deleteVersion(long id) {
 		idao.deleteById(id);
 		// TODO Auto-generated method stub
 		

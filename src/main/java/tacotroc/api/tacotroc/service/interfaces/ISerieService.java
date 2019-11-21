@@ -11,11 +11,11 @@ public interface ISerieService {
 
 	List<Serie> allSerie();
 
-	Serie allSerie(int id);
+	Serie allSerie(long id);
 
 	void addCSerie(String name);
 
-	void deleteSerie(int id);
+	void deleteSerie(long id);
 
 	void updateSerie(Serie serie);
 }

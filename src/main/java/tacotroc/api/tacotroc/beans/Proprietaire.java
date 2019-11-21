@@ -15,15 +15,11 @@ import lombok.Setter;
 public class Proprietaire {
 
 	@Id
-	private int id;
+	private long id;
 	@Column(name ="Last_Name" )
 	private String nom ;
 	@Column(name ="First_Name" )
 	private String prenom;
-	@Column(name ="Pseudo" )
-	private String pseudo;
-	@Column(name ="Mail" )
-	private String mail;
 	@Column(name ="Phone" )
 	private String tel;
 	@Column(name ="Compagny_Name" )

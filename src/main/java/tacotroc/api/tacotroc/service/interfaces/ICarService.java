@@ -2,17 +2,18 @@ package tacotroc.api.tacotroc.service.interfaces;
 
 import java.util.List;
 
-import tacotroc.api.tacotroc.dto.Car;
+import org.springframework.stereotype.Service;
 
 
+@Service
 public interface ICarService {
-	List<tacotroc.api.tacotroc.beans.Car> allClub();
+	List<tacotroc.api.tacotroc.beans.Car> allCar();
 
 	void addCar(tacotroc.api.tacotroc.beans.Car car);
 
-	void deleteCar(int id);
+	void deleteCar(long id);
 
-	void updateCar(Car car);
+	void updateCar(tacotroc.api.tacotroc.beans.Car car);
 
-	tacotroc.api.tacotroc.beans.Car allCar(int id);
+	tacotroc.api.tacotroc.beans.Car allCar(long id);
 }

@@ -11,9 +11,9 @@ public interface INationService {
 
 	void addNation(String name);
 
-	void deleteNation(int id);
+	void deleteNation(long id);
 
 	void updateNation(Nationalite nation);
 
-	Nationalite allNation(int id);
+	Nationalite allNation(long id);
 }

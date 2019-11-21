@@ -28,7 +28,7 @@ public class ClubService implements IClubService {
 	}
 
 	@Override
-	public void deleteClub(int id) {
+	public void deleteClub(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -40,9 +40,9 @@ public class ClubService implements IClubService {
 	}
 
 	@Override
-	public Club allClub(int id) {
+	public Club allClub(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

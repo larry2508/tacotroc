@@ -16,7 +16,7 @@ import lombok.Setter;
 @Table(name = "twp_adress")
 public class Adresse {
 	@Id
-	private int id ;
+	private long id ;
 
 
 	@Column(name ="Num_Rue" )

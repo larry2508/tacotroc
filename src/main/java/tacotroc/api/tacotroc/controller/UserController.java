@@ -26,12 +26,12 @@ public class UserController {
 	}
 
 	@GetMapping(value="/user/{id}")
-	public User alluser(@PathVariable int id){
+	public User alluser(@PathVariable long id){
 		return iserv.allUser(id);
 	}
 
 	@GetMapping(value="/user/delete/{id}")
-	public void deleteuser(@PathVariable int id){
+	public void deleteuser(@PathVariable long id){
 		iserv.deleteUser(id);
 	}
 	//avec id pour MAJ

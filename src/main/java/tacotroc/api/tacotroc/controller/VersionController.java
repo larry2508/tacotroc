@@ -27,7 +27,7 @@ public class VersionController {
 	return iserv.allVersion();
 	}
 	@GetMapping(value="/version/{id}")
-	public Version allversion(@PathVariable int id){
+	public Version allversion(@PathVariable long id){
 	return iserv.allVersion(id);
 	}
 	
@@ -37,7 +37,7 @@ public class VersionController {
 	}
 	
 	@GetMapping(value="/version/delete/{id}")
-	public void addversion(@PathVariable int id){
+	public void addversion(@PathVariable long id){
 		 iserv.deleteVersion(id);
 	}
 	

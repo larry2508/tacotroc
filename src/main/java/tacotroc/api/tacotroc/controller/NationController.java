@@ -24,7 +24,7 @@ public class NationController {
 	}
 	
 	@GetMapping(value="/nation/{id}")
-	public Nationalite allnation(@PathVariable int id){
+	public Nationalite allnation(@PathVariable long id){
 	return iserv.allNation(id);
 	}
 	
@@ -34,7 +34,7 @@ public class NationController {
 	}
 	
 	@GetMapping(value="/nation/delete/{id}")
-	public void deletenation(@PathVariable int id){
+	public void deletenation(@PathVariable long id){
 		 iserv.deleteNation(id);
 	}
 	

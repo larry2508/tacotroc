@@ -26,7 +26,7 @@ public class PaysController {
 	}
 	
 	@GetMapping(value="/pays/{id}")
-	public Pays allpays(@PathVariable int id){
+	public Pays allpays(@PathVariable long id){
 	return iserv.allPays(id);
 	}
 	
@@ -36,7 +36,7 @@ public class PaysController {
 	}
 	
 	@GetMapping(value="/pays/delete/{id}")
-	public void deletepays(@PathVariable int id){
+	public void deletepays(@PathVariable long id){
 		 iserv.deletePays(id);
 	}
 	

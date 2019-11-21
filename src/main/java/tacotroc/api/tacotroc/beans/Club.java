@@ -15,7 +15,7 @@ import lombok.Setter;
 
 public class Club {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 }

@@ -20,7 +20,7 @@ public class UserService implements IUserService{
 	}
 
 	@Override
-	public void deleteUser(int id) {
+	public void deleteUser(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -32,9 +32,9 @@ public class UserService implements IUserService{
 	}
 
 	@Override
-	public User allUser(int id) {
+	public User allUser(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

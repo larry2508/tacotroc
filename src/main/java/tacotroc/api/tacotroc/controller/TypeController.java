@@ -25,7 +25,7 @@ public class TypeController {
 	return iserv.allType();
 	}
 	@GetMapping(value="/type/{id}")
-	public Type alltype(@PathVariable int id){
+	public Type alltype(@PathVariable long id){
 	return iserv.allType(id);
 	}
 	
@@ -35,7 +35,7 @@ public class TypeController {
 	}
 	
 	@GetMapping(value="/type/delete/{id}")
-	public void deleteType(@PathVariable int id){
+	public void deleteType(@PathVariable long id){
 		 iserv.deleteType(id);
 	}
 	

@@ -27,7 +27,7 @@ public class PaysService  implements IPaysService{
 	}
 
 	@Override
-	public void deletePays(int id) {
+	public void deletePays(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -39,10 +39,10 @@ public class PaysService  implements IPaysService{
 	}
 
 	@Override
-	public Pays allPays(int id) {
+	public Pays allPays(long id) {
 		// TODO Auto-generated method stub
 		
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

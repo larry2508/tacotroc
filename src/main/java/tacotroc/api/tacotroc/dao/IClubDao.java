@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import tacotroc.api.tacotroc.beans.Club;
 
-public interface IClubDao extends JpaRepository<Club, Integer> {
+public interface IClubDao extends JpaRepository<Club, Long> {
 
 }

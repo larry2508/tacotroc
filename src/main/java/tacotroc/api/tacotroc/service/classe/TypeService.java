@@ -23,9 +23,9 @@ public class TypeService implements ITypeService{
 	}
 
 	@Override
-	public Type allType(int id) {
+	public Type allType(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 
@@ -39,7 +39,7 @@ public class TypeService implements ITypeService{
 	}
 
 	@Override
-	public void deleteType(int id) {
+	public void deleteType(long id) {
 		idao.deleteById(id);
 		// TODO Auto-generated method stub
 		

@@ -12,9 +12,9 @@ public interface IClubService {
 
 	void addClub(String name);
 
-	void deleteClub(int id);
+	void deleteClub(long id);
 
 	void updateClub(Club club);
 
-	Club allClub(int id);
+	Club allClub(long id);
 }

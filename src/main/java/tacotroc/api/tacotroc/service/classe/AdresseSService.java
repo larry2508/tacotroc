@@ -21,7 +21,7 @@ public class AdresseSService implements IAdresseSService{
 	}
 
 	@Override
-	public void deleteAdresseS(int id) {
+	public void deleteAdresseS(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -33,9 +33,9 @@ public class AdresseSService implements IAdresseSService{
 	}
 
 	@Override
-	public AdresseS allAdresseS(int id) {
+	public AdresseS allAdresseS(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

@@ -13,9 +13,9 @@ public interface ICylindreService {
 
 	 void addCylindre(String name);
 
-	void deleteCylindre(int id);
+	void deleteCylindre(long id);
 
 	void updateCylindre(Cylindre cylindre);
 
-	Cylindre allCylindre(int id);
+	Cylindre allCylindre(long id);
 }

@@ -11,9 +11,9 @@ public interface ICarColorService {
 
 	void addColor(CarColor color);
 
-	void deleteColor(int id);
+	void deleteColor(long id);
 
 	void updateColor(CarColor color);
 
-	List<CarColor> allColor(int id);
+	List<CarColor> allColor(long id);
 }

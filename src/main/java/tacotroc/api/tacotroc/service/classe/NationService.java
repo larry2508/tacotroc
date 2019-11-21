@@ -27,7 +27,7 @@ public class NationService implements INationService{
 	}
 
 	@Override
-	public void deleteNation(int id) {
+	public void deleteNation(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -39,9 +39,9 @@ public class NationService implements INationService{
 	}
 
 	@Override
-	public Nationalite allNation(int id) {
+	public Nationalite allNation(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

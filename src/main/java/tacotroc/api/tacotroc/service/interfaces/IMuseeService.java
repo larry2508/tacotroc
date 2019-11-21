@@ -11,9 +11,9 @@ public interface IMuseeService {
 
 	void addMusee(String name);
 
-	void deleteMusee(int id);
+	void deleteMusee(long id);
 
 	void updateMusee(Musee musee);
 
-	Musee allMusee(int id);
+	Musee allMusee(long id);
 }

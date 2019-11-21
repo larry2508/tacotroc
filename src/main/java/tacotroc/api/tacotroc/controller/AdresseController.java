@@ -25,12 +25,12 @@ public class AdresseController {
 	}
 
 	@GetMapping(value="/adresse/{id}")
-	public Adresse allAdresse(@PathVariable int id){
+	public Adresse allAdresse(@PathVariable long id){
 		return iserv.allAdresse(id);
 	}
 
 	@GetMapping(value="/adresse/delete/{id}")
-	public void deleteAdresse(@PathVariable int id){
+	public void deleteAdresse(@PathVariable long id){
 		iserv.deleteAdresse(id);
 	}
 	//avec id pour MAJ

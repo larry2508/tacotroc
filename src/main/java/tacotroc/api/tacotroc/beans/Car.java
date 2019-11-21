@@ -1,6 +1,8 @@
 package tacotroc.api.tacotroc.beans;
 
 
+import javax.persistence.Entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +21,7 @@ import tacotroc.api.tacotroc.beans.Version;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Car {
-	private int id;
+	private long id;
 	private String Immatriculation;
 	private String Comment;
 	private Color Details_Color_1;
@@ -54,4 +56,7 @@ public class Car {
 		this.id_twp_Museum=t.getId_twp_Museum();
 		
 	}
+
+
+
 }

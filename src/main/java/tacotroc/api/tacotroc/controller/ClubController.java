@@ -25,7 +25,7 @@ public class ClubController {
 	}
 	
 	@GetMapping(value="/club/{id}")
-	public Club allclub(@PathVariable int id){
+	public Club allclub(@PathVariable long id){
 	return iserv.allClub(id);
 	}
 	
@@ -35,7 +35,7 @@ public class ClubController {
 	}
 	
 	@GetMapping(value="/club/delete/{id}")
-	public void deleteclub(@PathVariable int id){
+	public void deleteclub(@PathVariable long id){
 		 iserv.deleteClub(id);
 	}
 	

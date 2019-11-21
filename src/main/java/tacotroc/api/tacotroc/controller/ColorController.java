@@ -29,7 +29,7 @@ public class ColorController {
 	}
 	
 	@GetMapping(value="/color/{id}")
-	public Color allcolor(@PathVariable int id){
+	public Color allcolor(@PathVariable long id){
 	return iserv.allColor(id);
 	}
 	
@@ -39,7 +39,7 @@ public class ColorController {
 	}
 	
 	@GetMapping(value="/color/delete/{id}")
-	public void deletecolor(@PathVariable int id){
+	public void deletecolor(@PathVariable long id){
 		 iserv.deleteColor(id);
 	}
 	

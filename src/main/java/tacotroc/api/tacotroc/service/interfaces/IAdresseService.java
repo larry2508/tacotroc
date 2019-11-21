@@ -7,9 +7,9 @@ import tacotroc.api.tacotroc.beans.Adresse;
 public interface IAdresseService {
 	List<Adresse> allAdresse();
 
-	void deleteAdresse(int id);
+	void deleteAdresse(long id);
 
 	void addAdresse (Adresse adresseS);
 
-	Adresse allAdresse(int id);
+	Adresse allAdresse(long id);
 }

@@ -16,7 +16,7 @@ import lombok.Setter;
 
 public class Musee {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 }

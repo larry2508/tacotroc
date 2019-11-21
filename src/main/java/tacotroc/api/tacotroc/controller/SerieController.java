@@ -25,7 +25,7 @@ public class SerieController {
 	return iserv.allSerie();
 	}
 	@GetMapping(value="/serie/{id}")
-	public Serie allserie(@PathVariable int id){
+	public Serie allserie(@PathVariable long id){
 	return iserv.allSerie(id);
 	}
 	
@@ -35,7 +35,7 @@ public class SerieController {
 	}
 	
 	@GetMapping(value="/serie/delete/{id}")
-	public void deleteserie(@PathVariable int id){
+	public void deleteserie(@PathVariable long id){
 		 iserv.deleteSerie(id);
 	}
 	

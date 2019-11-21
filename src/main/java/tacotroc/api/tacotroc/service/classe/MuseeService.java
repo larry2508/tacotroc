@@ -28,7 +28,7 @@ public class MuseeService implements IMuseeService{
 	}
 
 	@Override
-	public void deleteMusee(int id) {
+	public void deleteMusee(long id) {
 		// TODO Auto-generated method stub
 		idao.deleteById(id);
 	}
@@ -40,9 +40,9 @@ public class MuseeService implements IMuseeService{
 	}
 
 	@Override
-	public Musee allMusee(int id) {
+	public Musee allMusee(long id) {
 		// TODO Auto-generated method stub
-		Integer ids=id;
+		Long ids=id;
 		return idao.findById(ids).get();
 	}
 

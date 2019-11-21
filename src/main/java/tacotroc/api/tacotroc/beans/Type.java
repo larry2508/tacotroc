@@ -13,7 +13,7 @@ import lombok.Setter;
 @Table(name = "twp_type")
 public class Type {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 	

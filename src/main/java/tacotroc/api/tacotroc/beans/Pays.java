@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Pays {
 
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 }

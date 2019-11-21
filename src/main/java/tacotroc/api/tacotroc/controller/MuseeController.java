@@ -25,7 +25,7 @@ public class MuseeController {
 	}
 
 	@GetMapping(value="/musee/{id}")
-	public Musee allmusee(@PathVariable int id){
+	public Musee allmusee(@PathVariable long id){
 		return iserv.allMusee(id);
 	}
 
@@ -35,7 +35,7 @@ public class MuseeController {
 	}
 
 	@GetMapping(value="/musee/delete/{id}")
-	public void deletemusee(@PathVariable int id){
+	public void deletemusee(@PathVariable long id){
 		iserv.deleteMusee(id);
 	}
 

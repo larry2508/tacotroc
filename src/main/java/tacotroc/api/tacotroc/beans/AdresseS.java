@@ -17,7 +17,7 @@ import lombok.Setter;
 
 public class AdresseS {
 	@Id
-	private int id ;
+	private long id ;
 	
 	
 	@Column(name ="Num_Rue" )

@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name = "twp_nationality")
 public class Nationalite {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 }

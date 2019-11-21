@@ -11,11 +11,11 @@ public interface IVersionService {
 
 	List<Version> allVersion();
 
-	Version allVersion(int id);
+	Version allVersion(long id);
 
 	void addCVersion(String name);
 
-	void deleteVersion(int id);
+	void deleteVersion(long id);
 
 	void updateVersion(Version version);
 

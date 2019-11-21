@@ -16,7 +16,7 @@ import lombok.Setter;
 @Table(name = "twp_model")
 public class Model {
 	@Id
-	private int id ;
+	private long id ;
 	@Column(name ="Name" )
 	private String name;
 	@OneToOne

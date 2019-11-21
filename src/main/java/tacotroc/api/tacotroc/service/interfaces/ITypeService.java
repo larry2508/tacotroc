@@ -11,11 +11,11 @@ public interface ITypeService {
 
 	List<Type> allType();
 
-	Type allType(int id);
+	Type allType(long id);
 
 	void addType(String name);
 
-	void deleteType(int id);
+	void deleteType(long id);
 
 	void updateType(Type type);
 }

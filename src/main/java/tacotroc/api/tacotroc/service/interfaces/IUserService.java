@@ -10,9 +10,9 @@ public interface IUserService {
 
 	List<User> allUser();
 
-	void deleteUser(int id);
+	void deleteUser(long id);
 
 	void addUser(User user);
 
-	User allUser(int id);
+	User allUser(long id);
 }
