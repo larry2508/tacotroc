@@ -16,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarColorId implements Serializable {
-	private Car car ;
+	private long id ;
 	private Color color;
 	
 }

@@ -58,18 +58,18 @@ private EntityManager em;
 		long t3=car.getDetails_Color_2().getId();
 		//col.setName(car.getDetails_Color_1().getName());
 		CarColor col1=new CarColor();
-		col1.getCar().setId(t);
+		col1.setId(t);
 		col1.setColor(idaoco.findById(t2).get());
 		System.out.println(col1);
 		
 		CarColor col2=new CarColor();
-		col1.getCar().setId(t);
-		col1.setColor(idaoco.findById(t3).get());
+		col2.setId(t);
+		col2.setColor(idaoco.findById(t3).get());
 		System.out.println(col2);
 		idaoc2.addColor(col1);
 		//em.persist(col1);
 	//	idaoc3.saveAndFlush(col1);
-		//idaoc.save(col2);
+	//	idaoc.save(col2);
 
 	}
 	@Override
@@ -94,7 +94,7 @@ private EntityManager em;
 		// TODO Auto-generated method stub
 		Car c = new Car(idao.findById(id).get());
 		List<CarColor> impl=idaoc.findAllCCbyid(c.getId());
-		c.setDetails_Color_1(impl.get(0).getColor());
+		//c.setDetails_Color_1(impl.get(0).getColor());
 		if(impl.size()>1) {
 			c.setDetails_Color_2(impl.get(1).getColor());
 		}
