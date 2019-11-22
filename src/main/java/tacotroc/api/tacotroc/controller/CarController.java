@@ -43,7 +43,6 @@ public class CarController {
 	
 	@PostMapping(value = "/cars/update")
 	public void updateCar(@RequestBody Car car){
-		iserv.updateCar(car);
 	}
 	
 	

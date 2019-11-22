@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tacotroc.api.tacotroc.beans.Car;
+import tacotroc.api.tacotroc.beans.Color;
 import tacotroc.api.tacotroc.dao.ICarColorDao;
-import tacotroc.api.tacotroc.dao.ICarColorDao2;
 import tacotroc.api.tacotroc.dao.ICarDao;
 import tacotroc.api.tacotroc.dao.IColorDao;
 import tacotroc.api.tacotroc.dto.CarColor;
@@ -32,8 +32,9 @@ private EntityManager em;
 	IColorDao idaoco;
 	@Autowired
 	ICarColorService idaoc2;
-	@Autowired
-	ICarColorDao2 idaoc3;
+
+	
+	
 	@Override
 	public List<Car> allCar() {
 		List<tacotroc.api.tacotroc.dto.Car> transit =idao.findAll();
@@ -52,25 +53,19 @@ private EntityManager em;
 	@Override
 	public void addCar(Car car) {
 		tacotroc.api.tacotroc.dto.Car c = new tacotroc.api.tacotroc.dto.Car(car);
-		//idao.save(c);
+		idao.save(c);
 		int t=idao.findmaxId();
 		long t2=car.getDetails_Color_1().getId();
 		long t3=car.getDetails_Color_2().getId();
-		//col.setName(car.getDetails_Color_1().getName());
+		List<CarColor>l=idaoc.findAll();
 		CarColor col1=new CarColor();
+		CarColor col2=new CarColor();
 		col1.setId(t);
 		col1.setColor(idaoco.findById(t2).get());
-		System.out.println(col1);
-		
-		CarColor col2=new CarColor();
 		col2.setId(t);
-		col2.setColor(idaoco.findById(t3).get());
-		System.out.println(col2);
-		idaoc2.addColor(col1);
-		//em.persist(col1);
-	//	idaoc3.saveAndFlush(col1);
-	//	idaoc.save(col2);
-
+		col2.setColor(idaoco.findById(t3).get());;
+		idaoc2.insertWithQuery(col1);
+		idaoc2.insertWithQuery(col2);
 	}
 	@Override
 	public void deleteCar(long id) {

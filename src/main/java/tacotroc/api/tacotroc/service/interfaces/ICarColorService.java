@@ -2,6 +2,8 @@ package tacotroc.api.tacotroc.service.interfaces;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import tacotroc.api.tacotroc.dto.CarColor;
@@ -16,4 +18,6 @@ public interface ICarColorService {
 	void updateColor(CarColor color);
 
 	List<CarColor> allColor(long id);
+	@Transactional
+	public void insertWithQuery(CarColor person) ;
 }

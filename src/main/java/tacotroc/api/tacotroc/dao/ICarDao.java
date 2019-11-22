@@ -1,14 +1,13 @@
 package tacotroc.api.tacotroc.dao;
 
-import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import tacotroc.api.tacotroc.dto.Car;
-import tacotroc.api.tacotroc.dto.CarColor;
 
-
+@Repository
 public interface ICarDao extends JpaRepository<Car, Long> {
 
 

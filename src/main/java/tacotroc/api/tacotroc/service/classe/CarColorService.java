@@ -35,7 +35,7 @@ public class CarColorService implements ICarColorService {
 
 	@Override
 	@Transactional
-	@Modifying
+	@Modifying(clearAutomatically = true)
 	public void updateColor(CarColor color) {
 		
 		idao.save(color);
@@ -45,6 +45,15 @@ public class CarColorService implements ICarColorService {
 	@Override
 	public List<CarColor> allColor(long id) {
 	return idao.findAllCCbyid(id);
+	}
+	
+	@Transactional
+	@Override
+	public void insertWithQuery(CarColor person) {
+	    em.createNativeQuery("INSERT INTO rel_car_color(id, id_twp_color) VALUES (?,?)")
+	      .setParameter(1, person.getId())
+	      .setParameter(2, person.getColor().getId())
+	      .executeUpdate();
 	}
 
 }

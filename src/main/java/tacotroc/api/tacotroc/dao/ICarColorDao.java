@@ -10,8 +10,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import tacotroc.api.tacotroc.dto.CarColor;
+import tacotroc.api.tacotroc.dto.CarColorId;
 @Repository
-public interface ICarColorDao  extends JpaRepository<CarColor, Long>{
+public interface ICarColorDao  extends JpaRepository<CarColor, CarColorId>{
 
 
 	@Query("SELECT u FROM CarColor u WHERE u.id =?1")
@@ -21,6 +22,8 @@ public interface ICarColorDao  extends JpaRepository<CarColor, Long>{
 	@Modifying
 	@Query("delete  FROM CarColor  WHERE id =?1")
 	void deleteCCbyid(long i);
+
+	
 
 
 
