@@ -27,7 +27,7 @@ public class Proprietaire {
 	@Column(name ="Siret" )
 	private String siret;
 	@Column(name = "Compagny")
-	private boolean Entreprise;
+	private Integer Entreprise;
 	
 
 }

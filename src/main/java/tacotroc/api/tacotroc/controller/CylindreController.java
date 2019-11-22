@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tacotroc.api.tacotroc.beans.Color;
 import tacotroc.api.tacotroc.beans.Cylindre;
 import tacotroc.api.tacotroc.service.interfaces.ICylindreService;
 
