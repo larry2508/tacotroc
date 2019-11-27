@@ -12,6 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import tacotroc.api.tacotroc.beans.Club;
 import tacotroc.api.tacotroc.beans.Cylindre;
 import tacotroc.api.tacotroc.beans.Model;
 import tacotroc.api.tacotroc.beans.Musee;
@@ -70,6 +71,9 @@ public class Car {
 	@OneToOne
 	@JoinColumn(name = "id_twp_Museum")
 	private Musee id_twp_Museum;
+	@OneToOne
+	@JoinColumn(name = "id_twp_Club")
+	private Club id_twp_Club;
 	
 	
 	public Car( tacotroc.api.tacotroc.beans.Car t) {
@@ -87,6 +91,7 @@ public class Car {
 		this.id_twp_Owner=t.getId_twp_Owner();
 		this.id_twp_Country=t.getId_twp_Country();
 		this.id_twp_Museum=t.getId_twp_Museum();
+		this.id_twp_Club=t.getId_twp_Club();
 		
 	}
 

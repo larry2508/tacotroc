@@ -37,6 +37,7 @@ public class Car {
 	private Proprietaire id_twp_Owner;
 	private Pays id_twp_Country;
 	private Musee id_twp_Museum;
+	private Club id_twp_Club ; 
 	
 	
 	public Car( tacotroc.api.tacotroc.dto.Car t) {
@@ -54,6 +55,7 @@ public class Car {
 		this.id_twp_Owner=t.getId_twp_Owner();
 		this.id_twp_Country=t.getId_twp_Country();
 		this.id_twp_Museum=t.getId_twp_Museum();
+		this.id_twp_Club=t.getId_twp_Club();
 		
 	}
 

@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tacotroc.api.tacotroc.beans.Car;
-import tacotroc.api.tacotroc.beans.Color;
 import tacotroc.api.tacotroc.dao.ICarColorDao;
 import tacotroc.api.tacotroc.dao.ICarDao;
 import tacotroc.api.tacotroc.dao.IColorDao;
@@ -41,7 +40,11 @@ private EntityManager em;
 		List<Car> renvoi= new ArrayList<Car>();
 		for (tacotroc.api.tacotroc.dto.Car car : transit) {
 			Car c = new Car(car);
+			System.out.println(c.getId());
 			List<CarColor> impl=idaoc.findAllCCbyid(c.getId());
+			/*for (CarColor car2 : impl) {
+				System.out.println(car2);
+			}*/
 			c.setDetails_Color_1(impl.get(0).getColor());
 			if(impl.size()>1) {
 				c.setDetails_Color_2(impl.get(1).getColor());
